@@ -19,7 +19,8 @@ All tests are written in Python using the pytest framework.
    Run API tests only: bash `python -m pytest HomeTest/test_api.py`
 
 4. Notes:
-   ChromeDriver must match your Chrome version. 
+   ChromeDriver must match your Chrome version.
    `--headless` mode is available in test_ui (commented out in the code) for CI/CD use.
-   Credentials, and URLs, and constants are stored in `config.py`. 
-   Locators are centralized in `locators.py`. 
+   Credentials, and URLs, and constants are stored in `config.py`.
+   Locators are centralized in `locators.py`.
+   The `ui_helpers.py` file contains reusable helper functions for interacting with UI elements using Selenium.
