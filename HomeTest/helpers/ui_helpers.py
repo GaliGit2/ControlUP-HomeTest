@@ -1,7 +1,8 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from config import DEFAULT_TIMEOUT, ITEMS_NOT_FOUND_EXCEPTION, ELEMENTS_NOT_FOUND_EXCEPTION, NOT_A_NUMBER_EXCEPTION
-from locators import INVENTORY_LIST, INVENTORY_ITEM
+
+from HomeTest.config import DEFAULT_TIMEOUT, ELEMENTS_NOT_FOUND_EXCEPTION, ITEMS_NOT_FOUND_EXCEPTION, \
+    NOT_A_NUMBER_EXCEPTION
 
 
 def wait_and_click(driver, by, locator, timeout=DEFAULT_TIMEOUT):
@@ -35,9 +36,6 @@ def wait_and_get_text(driver, by, locator, timeout=DEFAULT_TIMEOUT):
     return WebDriverWait(driver, timeout).until(
         EC.visibility_of_element_located((by, locator))
     ).text
-
-def get_all_items(driver):
-    return wait_and_find_all_in_element(driver, *INVENTORY_LIST, *INVENTORY_ITEM)
 
 def wait_and_find_all_in_element(driver, parent_by, parent_locator, child_by, child_locator, timeout=DEFAULT_TIMEOUT):
     parent = WebDriverWait(driver, timeout).until(

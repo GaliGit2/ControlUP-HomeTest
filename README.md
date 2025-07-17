@@ -15,8 +15,8 @@ All tests are written in Python using the pytest framework.
 3. Running the Tests:
     * Run bash `cd HomeTest`
     * Run all tests: bash `python -m pytest` 
-    * Run UI tests only: bash `python -m pytest test_ui.py` 
-    * Run API tests only: bash `python -m pytest test_api.py`
+    * Run UI tests only: bash `python -m pytest tests\test_ui.py` 
+    * Run API tests only: bash `python -m pytest tests\test_api.py`
 
 4. Notes:
     * ChromeDriver must match your Chrome version.
@@ -24,3 +24,4 @@ All tests are written in Python using the pytest framework.
     * Credentials, and URLs, and constants are stored in `config.py`.
     * Locators are centralized in `locators.py`.
     * The `ui_helpers.py` file contains reusable helper functions for interacting with UI elements using Selenium.
+    * The `api_helpers.py` file contains reusable helper functions for API requests.
