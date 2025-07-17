@@ -13,9 +13,10 @@ All tests are written in Python using the pytest framework.
     * Make sure you have Python 3.7+ and Chrome browser installed.
 
 3. Running the Tests:
+    * Run bash `cd HomeTest`
     * Run all tests: bash `python -m pytest` 
-    * Run UI tests only: bash `python -m pytest HomeTest/test_ui.py` 
-    * Run API tests only: bash `python -m pytest HomeTest/test_api.py`
+    * Run UI tests only: bash `python -m pytest test_ui.py` 
+    * Run API tests only: bash `python -m pytest test_api.py`
 
 4. Notes:
     * ChromeDriver must match your Chrome version.
